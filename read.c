@@ -6,7 +6,7 @@
 /*   By: qdang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 12:56:24 by qdang             #+#    #+#             */
-/*   Updated: 2019/11/06 15:35:37 by qdang            ###   ########.fr       */
+/*   Updated: 2019/11/07 20:31:33 by qdang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static int	check_connection(char *buff)
 	int		i;
 	int		idx;
 
-	i = 0;
+	i = -1;
 	idx = 0;
-	while (i <= 18)
+	while (++i <= 18)
 	{
 		while (i <= 18 && buff[i] != '#')
 			i++;
@@ -31,7 +31,6 @@ static int	check_connection(char *buff)
 			idx++;
 		if (i - 5 >= 0 && buff[i - 5] == '#')
 			idx++;
-		i++;
 	}
 	if (idx == 8 || idx == 6)
 		return (1);

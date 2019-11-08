@@ -6,7 +6,7 @@
 /*   By: qdang <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/18 21:04:30 by qdang             #+#    #+#             */
-/*   Updated: 2019/10/30 17:37:43 by qdang            ###   ########.fr       */
+/*   Updated: 2019/11/07 21:14:15 by qdang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ void			ft_lstaddend(t_list **alst, t_list *new);
 char			**ft_mapnew(int	width, int length);
 void			ft_mapput(char **map, int width, int length);
 char			**ft_mapcpy(char **old, int width, int length);
+int				ft_mapdel(char ***map_a, int length);
 
 #endif
